@@ -1,0 +1,420 @@
+<!DOCTYPE HTML>
+<HTML>
+    <title>
+        Disney+Hostar
+    </title>
+    <Head>
+        <link rel="icon" href="logo.png">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </Head>
+    <Head>
+       <style>
+    .container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background-color: #020202;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+
+    .container img {
+      width: 160px;
+      height: 250px;
+      border-radius: 10px;
+    }
+
+    .content {
+      flex: 1;
+    }
+
+    .content h2 {
+      margin: 0 0 10px 0;
+      font-size: 1.5em;
+    }
+
+    .content p {
+      margin: 0;
+    }
+  </style>
+    <Style>
+     Body{
+         background-color: #060606;
+         }
+    .scroll-container {
+      display: flex;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ;
+      overflow-x: auto;
+      scroll-behavior: smooth; 
+      gap: 8px;
+      padding: 5px;
+    }
+
+    .scroll-container img {
+      width: 180px;
+      height: 220px;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+    .scroll-container {
+      scrollbar-width: none;
+           
+    }
+     </Style>
+         <Style>
+            .slidebar{
+            width:200px;
+            border:2px;
+            margin:15px;
+        }
+        .slidebar{
+            position: fixed;
+            width: 80px;
+            height: 100vh;
+            background-color: rgb(6, 6, 6);
+            backdrop-filter: blur(15px);
+            border-right: 1px solid rgb(21, 3, 3);
+            transition: 0.3s;
+            overflow: hidden;
+        }
+        .slidebar:hover{
+                   width: 250px;
+        }
+        .slidebar-nav{
+            padding: 20px 0;
+            list-style: none;
+        }
+        .nav-item{
+            position: relative;
+            padding: 15px 25px;
+            margin: 8px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            white-space: nowrap;
+        }
+        .nav-item:hover{
+            background: rgb(56, 56, 56);
+            transform: translateX(10px);
+        }
+
+        .nav-item{
+            color: rgb(255, 255, 255);
+            font-size: 1.3em;
+            margin-right: 20px;
+            width: 25px;   
+        }
+        .nav-item span{
+            color:#ffffff;
+            font-size: 0.9em;
+            font-weight: 500;
+            opacity: 0;
+            transition: 0.3s;
+        }
+        .slidebar:hover .nav-item span{
+            opacity: 1;
+        }
+        .nav-item::before{
+            content:'';
+            position:absolute;
+            left:0;
+            top:0;
+            width:3px;
+            height:100%;
+            background:white;
+            transform:scaleY(0);
+            transition: transform 0.3s;
+        }
+        .nav-item:hover::before{
+            transform: scaleY(1);
+        }
+    </Style>
+    <style>
+    .search-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+    }
+    .search-box {
+      padding: 10px;
+      width: 950px;
+      font-size: 16px;
+      background-color: rgb(253, 253, 255);
+      border: 2px solid #2c2a2a;
+      border-radius: 15px;
+    }
+    .search-button {
+      padding: 10px;
+      width: 80px;
+      height: 40%;
+      font-size: 16px;
+      border-radius: 15px;
+    }
+  </style>
+  <style>
+    .image-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content:left;
+      gap: 30px;
+      max-width: 600px;
+      margin: 10px;
+      margin-bottom: 15px;
+    }
+
+    .image-grid img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px; 
+    }
+  </style>
+    </Head>
+    <Body>
+         <div class="slidebar">
+            <ul class="slidebar-nav">
+                <li class="nav-item">
+                    <a href="Mini-Project.html"><i class="fas fa-home" style="color: #f5f9ff;"></i></a>
+                    <span><b>Home</b></span>
+                </li>
+                 <li class="nav-item">
+                    <a href=""><i class="fa-solid fa-magnifying-glass" style="color: #f5f9ff;"></i></a>
+                    <span><b>Search</b></span>
+                </li>
+                 <li class="nav-item">
+                  <a href="Mini-Project.html"><i class="fa-solid fa-tv" style="color: #f5f9ff;"></i></a>
+                    <span><b>Tv</b></span>
+                </li>
+                <li class="nav-item">
+                    <a href="Mini-Project.html"><i class="fa-solid fa-clapperboard" style="color: #f5f9ff;"></i></a>
+                    <span><b>Movies</b></span>
+                </li>
+                <li class="nav-item">
+                    <i class="fa-solid fa-person-running" style="color: #f5f9ff;"></i>
+                    <span><b>Sports</b></span>
+                </li>
+                <li class="nav-item">
+                    <i class="fa-solid fa-video" style="color: #f5f9ff;"></i>
+                    <span><b>Sparks</b></span>
+                </li>
+                <li class="nav-item">
+                    <i class="fa-solid fa-list" style="color: #f5f9ff;"></i>
+                    <span><b>Categories</b></span>
+                </li>
+                <li class="nav-item">
+                    <i class="fa-brands fa-wolf-pack-battalion" style="color: #f5f9ff;"></i>
+                    <span><b>My Space</b></span>
+                </li>
+            </ul>
+        </div>
+        <body>
+    <div class="search-container">
+      <input type="text" id="searchInput" class="search-box" placeholder="Search movies, shows...">
+<button class="search-button" onclick="searchMovie()">Search</button>
+    </div>
+    <Body>
+       <script>
+function searchMovie() {
+  const input = document.getElementById('searchInput').value.toLowerCase().trim();
+  const searchTerms = input.split(',').map(term => term.trim()).filter(term => term);
+  const containers = document.querySelectorAll('.container');
+  if (searchTerms.length === 0) 
+  {
+    containers.forEach(container => container.style.display = 'flex');
+    return;
+  }
+  let anyMatch = false;
+  containers.forEach(container => {
+    const title = container.querySelector('h2').textContent.toLowerCase();
+    const isMatch = searchTerms.some(term => title.includes(term));
+    if (isMatch)
+     {
+      container.style.display = 'flex';
+      anyMatch = true;
+    } else {
+      container.style.display = 'none';
+    }
+  });
+
+  if (!anyMatch) {
+    alert("No matching movie or show found.");
+  }
+}
+</script>
+    </Body>
+</body>
+        <div style="margin-left: 130px;">
+       <center><H2 Style="color: rgb(255, 255, 255);"><B>Trending In India</B></H2></center>
+ </div>
+ <div class="container">
+    <img src="Salaar.png" alt="Salaar">
+    <div class="content">
+      <h2>Salaar: Part 1 – Ceasefire</h2>
+      <p>Trending now in India. Watch the action-packed film exclusively on Hotstar.</p>
+      <a href="https://www.hotstar.com/in/movies/salaar-part-1-ceasefire/1260170331/watch" style="color:lightblue;">Watch Now</a>
+    </div>
+  </div>
+<div class="container">
+    <img src="Super.png" alt="Image">
+    <div class="content">
+      <h2>Evanukku Sariyana Aalu Illai</h2>
+      <p>Trending now in India. Watch the Funny and Patriotism film exclusively on Hotstar.</p>
+      <a href="https://www.hotstar.com/in/movies/evanukku-sariyana-aalu-illai/1260049493/watch" style="color: lightblue;">Watch Now</a>
+    </div>
+  </div>
+  <div class="container">
+    <img src="Fav.png" alt="Image">
+    <div class="content">
+      <h2>Ungalukkaga Oruvan</h2>
+      <p>Trending now in India. Watch the action-packed film exclusively on Hotstar.</p>
+      <a href="https://www.hotstar.com/in/movies/ungalukkaga-oruvan/1260046299/watch" style="color: lightblue;">Watch Now</a>
+    </div>
+  </div>
+  <div class="container">
+    <img src="Ram.png" alt="Image">
+    <div class="content">
+      <h2>Vinaya Vidheya Rama</h2>
+      <p>Trending now in India. Watch the action-packed and emotional film exclusively on Hotstar.</p>
+      <a href="https://www.hotstar.com/in/movies/vinaya-vidheya-rama/1260009604/watch" style="color: lightblue;">Watch Now</a>
+    </div>
+  </div>
+  <div class="container">
+    <img src="RRR.png" alt="Image">
+    <div class="content">
+      <h2>RRR</h2>
+      <p>Trending now in India. Watch the action-packed,love,friendship and Patriotism film exclusively on Hotstar.</p>
+      <a href="https://www.hotstar.com/in/movies/rrr/1260108121/watch" style="color: lightblue;">Watch Now</a>
+    </div>
+  </div>
+  <div class="container">
+    <img src="Mahadheera.png" alt="Image">
+    <div class="content">
+      <h2>Mahadheera</h2>
+      <p>Trending now in India. Watch the action-packed and Love film exclusively on Hotstar.</p>
+      <a href="https://www.hotstar.com/in/movies/magadheera/1260008895/watch" style="color: lightblue;">Watch Now</a>
+    </div>
+  </div>
+  <div class="container">
+    <img src="Marrie.png" alt="Image">
+    <div class="content">
+      <h2>Maari-2</h2>
+      <p>Trending now in India. Watch the action-packed,love and friendship film exclusively on Hotstar.</p>
+      <a href="https://www.hotstar.com/in/movies/maari-2/1000228200/watch" style="color: lightblue;">Watch Now</a>
+    </div>
+  </div>
+  <div class="container">
+    <img src="Bharat.png" alt="Image">
+    <div class="content">
+      <h2>Bharath Ennum Naan</h2>
+      <p>Trending now in India. Watch the Political film exclusively on Hotstar.</p>
+      <a href="https://www.hotstar.com/in/movies/bharath-ennum-naan/1100014734/watch" style="color: lightblue;">Watch Now</a>
+    </div>
+  </div>
+  <div class="container">
+    <img src="image1.png" alt="Image">
+    <div class="content">
+      <h2>Siragadikka Aasai</h2>
+      <p>Trending now in India. Watch the most fun and family serial exclusively on Hotstar.</p>
+      <a href="https://www.hotstar.com/in/shows/siragadikka-aasai/1260129356/the-constable-reveals-muthus-innocence/1700069279/watch" style="color: lightblue;">Watch Now</a>
+    </div>
+  </div>
+  <div class="container">
+    <img src="image2.png" alt="Image">
+    <div class="content">
+      <h2>Pandian Stores-2</h2>
+      <p>Trending now in India. Watch the most fun and family serial exclusively on Hotstar.</p>
+      <a href="https://www.hotstar.com/in/shows/pandian-stores-2/1260000603/thangamayil-feels-devastated/1700069314/watch" style="color: lightblue;">Watch Now</a>
+    </div>
+  </div>
+  <div class="container">
+    <img src="image3.png" alt="Image">
+    <div class="content">
+      <h2>Mahanadhi</h2>
+      <p>Trending now in India. Watch the most fun and family serial exclusively on Hotstar.</p>
+      <a href="https://www.hotstar.com/in/shows/mahanadhi/1260129361/pasupathy-manipulates-vennila/1700069200/watch" style="color: lightblue;">Watch Now</a>
+    </div>
+  </div>
+  <div class="container">
+    <img src="image4.png" alt="Image">
+    <div class="content">
+      <h2>Adhisaya Piraviyum Arpudha Pennum</h2>
+      <p>Trending now in India. Watch the most Magical and family serial exclusively on Hotstar.</p>
+      <a href="https://www.hotstar.com/in/shows/adhisaya-piraviyum-arpudha-pennum/1260020212/adhisaya-piraviyum-arpudha-pennum/1100034631/watch" style="color: lightblue;">Watch Now</a>
+    </div>
+  </div>
+  <div class="container">
+    <img src="image5.png" alt="Image">
+    <div class="content">
+      <h2>Ayyanar Thunai</h2>
+      <p>Trending now in India. Watch the most fun and family serial exclusively on Hotstar.</p>
+      <a href="https://www.hotstar.com/in/shows/ayyanar-thunai/1271388570/nila-under-scrutiny/1700069280/watch" style="color: lightblue;">Watch Now</a>
+    </div>
+  </div>
+  <div class="container">
+    <img src="image6.png" alt="Image">
+    <div class="content">
+      <h2>Radha Krishna</h2>
+      <p>Trending now in India. Watch the most Epic and Mythology serial exclusively on Hotstar.</p>
+      <a href="https://www.hotstar.com/in/shows/radha-krishna/1260002518/radha-krishna/1100013114/watch" style="color: lightblue;">Watch Now</a>
+    </div>
+  </div>
+  <div class="container">
+    <img src="image7.png" alt="Image">
+    <div class="content">
+      <h2>Mahabharatham</h2>
+      <p>Trending now in India. Watch the most Epic and Mythology serial exclusively on Hotstar.</p>
+      <a href="https://www.hotstar.com/in/shows/mahabharatham/1877/mahabharatham/1000036883/watch" style="color: lightblue;">Watch Now</a>
+    </div>
+  </div>
+  <div class="container">
+    <img src="1.png" alt="Image">
+    <div class="content">
+      <h2>Doraemon</h2>
+      <p>Trending now in India. Watch the most fun cartoon exclusively on Hotstar.</p>
+      <a href="https://www.hotstar.com/in/shows/doraemon/1260021004/space-simulator-a-passionate-fan-letter-to-gian/1271316304/watch" style="color: lightblue;">Watch Now</a>
+    </div>
+  </div>
+  <div class="container">
+    <img src="2.png" alt="Image">
+    <div class="content">
+      <h2>Motu Patlu</h2>
+      <p>Trending now in India. Watch the most fun cartoons exclusively on Hotstar.</p>
+      <a href="https://www.hotstar.com/in/shows/motu-patlu/1971003164/motu-patlu/1971079094/watch" style="color: lightblue;">Watch Now</a>
+    </div>
+  </div>
+  <div class="container">
+    <img src="3.png" alt="Image">
+    <div class="content">
+      <h2>Golmaal Junior</h2>
+      <p>Trending now in India. Watch the most fun cartoons exclusively on Hotstar.</p>
+      <a href="https://www.hotstar.com/in/shows/golmaal-jr/1971003165/golmaal-jr/1971037083/watch" style="color: lightblue;">Watch Now</a>
+    </div>
+  </div>
+  <div class="container">
+    <img src="4.png" alt="Image">
+    <div class="content">
+      <h2>The Aristocats</h2>
+      <p>Trending now in India. Watch the most fun cartoons exclusively on Hotstar.</p>
+      <a href="https://www.hotstar.com/in/movies/the-aristocats/1260018144/watch" style="color: lightblue;">Watch Now</a>
+    </div>
+  </div>
+  <div class="container">
+    <img src="5.png" alt="Image">
+    <div class="content">
+      <h2>The Lion Kings</h2>
+      <p>Trending now in India. Watch the most fun cartoons exclusively on Hotstar.</p>
+      <a href="https://www.hotstar.com/in/shows/the-lion-kings-timon-and-pumbaa/1260015081/the-lion-kings-timon-and-pumbaa/1260018786/watch" style="color: lightblue;">Watch Now</a>
+    </div>
+  </div>
+  <div class="container">
+    <img src="6.png" alt="Image">
+    <div class="content">
+      <h2>Dragons The Nine Realms</h2>
+      <p>Trending now in India. Watch the most fun cartoons exclusively on Hotstar.</p>
+      <a href="https://www.hotstar.com/in/shows/dragons-the-nine-realms/1971003069/dragons-the-nine-realms/1971036763/watch" style="color: lightblue;">Watch Now</a>
+    </div>
+  </div>
+    </Body>
+</HTML>
